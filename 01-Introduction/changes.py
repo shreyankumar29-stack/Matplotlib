@@ -3,7 +3,7 @@ from matplotlib import pyplot as plt
 # print(plt.style.available)  # Print available styles
 
 # plt.style.use('ggplot')  # Use the 'ggplot' style for the plot
-plt.xkcd()  # Use the 'xkcd' style for the plot)
+plt.xkcd()  # Use the 'xkcd' style for the plot
 # Median Developer Salaries by Age
 ages_x = [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
 
@@ -32,5 +32,5 @@ plt.title("Median Salary (USD) by Age")
 
 # Add a legend to the plot
 plt.legend()  
-plt.savefig('plot.png')  # Save the plot as a PNG file
+plt.savefig('Results/plot1.png')  # Save the plot as a PNG file
 plt.show()
