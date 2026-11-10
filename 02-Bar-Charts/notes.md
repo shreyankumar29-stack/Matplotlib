@@ -1,3 +1,8 @@
+## Most Popular Programming Languages
+
+### Code
+
+```python
 import csv
 import numpy as np
 import pandas as pd
@@ -6,11 +11,12 @@ from matplotlib import pyplot as plt
 
 plt.style.use("fivethirtyeight")
 
-data=pd.read_csv('data.csv')
-ids=data['Responder_id']
-lang_responses=data['LanguagesWorkedWith']
+data = pd.read_csv('data.csv')
 
-languages_counter= Counter()
+ids = data['Responder_id']
+lang_responses = data['LanguagesWorkedWith']
+
+languages_counter = Counter()
 
 for response in lang_responses:
     languages_counter.update(response.split(';'))
@@ -31,3 +37,15 @@ plt.barh(languages, popularity)
 plt.xlabel("Number of People Who Use")
 plt.tight_layout()
 plt.show()
+```
+
+### Concepts Learned
+
+1. Reading CSV files using Pandas.
+2. Extracting columns from a DataFrame.
+3. Using `Counter()` to calculate frequencies.
+4. Using `update()` to count language occurrences.
+5. Using `most_common(15)` to find the top 15 languages.
+6. Using `reverse()` to reverse list order.
+7. Creating horizontal bar charts using `plt.barh()`.
+8. Customizing charts using titles and axis labels.
