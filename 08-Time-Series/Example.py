@@ -1,6 +1,7 @@
-import matplotlib.pyplot as plt
-from datetime import datetime
-
+import pandas as pd
+from datetime import datetime, timedelta
+from matplotlib import pyplot as plt
+from matplotlib import dates as mpl_dates
 plt.style.use('seaborn-v0_8')
 
 dates = [
@@ -17,11 +18,11 @@ y = [0, 1, 3, 4, 6, 5, 7]
 
 plt.plot(dates, y, marker='o', linestyle='solid')
 
-plt.gcf().autofmt_xdate()
+date_format = mpl_dates.DateFormatter('%b %d, %Y')
 
-# plt.title('Date vs Values')
-# plt.xlabel('Date')
-# plt.ylabel('Values')
+plt.gca().xaxis.set_major_formatter(date_format)
+
+plt.gcf().autofmt_xdate()
 
 plt.tight_layout()
 plt.show()
