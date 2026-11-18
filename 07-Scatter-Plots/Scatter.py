@@ -12,7 +12,7 @@ ratio = data['ratio']
 plt.scatter(view_count, likes, c=ratio, cmap='summer',
             edgecolor='black', linewidth=1, alpha=0.75)
 
-cbar = plt.colorbar()
+cbar = plt.colorbar() #represents the color bar on the right side of the scatter plot
 cbar.set_label('Like/Dislike Ratio')
 
 plt.xscale('log')
